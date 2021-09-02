@@ -578,7 +578,24 @@
 	</div>
   </div>
 </section>
+<script>
+		
+	document.getElementById('news_letter').onclick =
+	function(){
+	swal({
+	  title: 'Enter Email! For Subscribe',
+	  input: 'email'
+	}).then(function (email) {
+	  swal({
+		type: 'success',
+		title:'Hey! John',
+		text: "Thanks! For Subscribing Our News Letter!."
 
+	  })
+	})
+	  
+	};
+			   </script>
 <div id="toTop" class="btn btn-info" style="display: block;"><span class="glyphicon glyphicon-chevron-up"></span>  Top</div>
 <script type="text/javascript" src="js/index.js"></script>
 	
