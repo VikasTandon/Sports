@@ -775,24 +775,22 @@ swal({
 	text: "Your Account has been Created  sucessfully.",
 });
 };
-	//Notifications
-            function showNotification() {
-                const notification = new Notification("New message incoming", {
-                   body: "Hi there. How are you doing?",
-                   icon: "yourimageurl.png"
-                })
-                notification.onclick = (e) => {
-                    window.location.href = "https://google.com";
-                 };
-             }
-            console.log(Notification.permission);
-            if (Notification.permission === "granted") {
-              
-            } else if (Notification.permission !== "denied") {
-               Notification.requestPermission().then(permission => {
-                  console.log(permission);
-               });
-            }
+	 function showNotification() {
+    const notification = new Notification("New Message from Fashion",{
+    body:("Hey! You want to catch up soon?"),
+    icon:"http//sports/img/4.png"
+});
+}
+console.log(Notification.permission);
+if(Notification.permission === "granted"){
+showNotification();
+}else if(Notification.permission!== "denied"){
+Notification.requestPermission().then(permission=>{
+if(permission==="granted"){
+     showNotification();
+}
+})
+}
    
 </script>
 <div id="toTop" class="btn btn-info" style="display: block;"><span class="glyphicon glyphicon-chevron-up"></span>  Top</div>
